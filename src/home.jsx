@@ -1,54 +1,8 @@
 import { Link } from 'react-router-dom';
 import './home.css'
 import { IoIosSearch } from "react-icons/io";
-export default function Home() {
-    const apiCategories = [
-        {
-            name: "Animals",
-            endPoint: "/v1/animals",
-            description: "Get Information and facts and facts about animals",
-        },
-        {
-            name: "Facts",
-            endpoints: "/v1/facts",
-            description: "Retrieve random interesting facts",
-        },
-        {
-            name: "Quotes",
-            endpoints: "/v1/quotes",
-            description: "Get inspirational and famous quotes",
-        }, 
-        {
-            name: "Exercises",
-            endpoints: "/v1/exercises",
-            description: "Search exercises by muscle or equipment",
-        },
-        {
-            name: "Nutrition",
-            endpoints: "/v1/nutrition",
-            description: "Get nutritional data for foods",
-        },
-        {
-            name: "Dictionary",
-            endpoints: "/v1/dictionary",
-            description: "Search definitions and meanings",
-        },
-        {
-            name: "Jokes",
-            endpoints: "/v1/jokes",
-            description: "Get random jokes",
-        },
-        {
-            name: "Trivia",
-            endpoints: "/v1/trivia",
-            description: "Answer trivia questions by category",
-        },
-        {
-            name: "Countries",
-            endpoints: "/v1/country",
-            description: "Get detailed country information",
-        }
-    ]
+export default function Home({slicedCategories}) {
+    
     return (
         <>
             <div className="hero">
@@ -67,7 +21,15 @@ export default function Home() {
                  <p><Link to="/">View All</Link></p>
                </div>
                <div className="cat-grid">
-            
+                    {
+                        slicedCategories.map((category) => (
+                            <div className="card" key={category.name}>
+                                <div>{category.icon}</div>
+                                <p className='title'>{category.name}</p>
+                                <p>{category.description}</p>
+                            </div>
+                        ))
+                    }
                </div>
             </div>
         </>
