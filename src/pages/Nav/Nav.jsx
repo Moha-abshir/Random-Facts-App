@@ -9,7 +9,7 @@ import { FaExclamationCircle } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
 import { MdLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-import logo from '../src/assets/logo.jpeg';
+import logo from '../../assets/logo.jpeg';
 import './nav.css'
 export default function Nav({ setIsSearchActive }) {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
