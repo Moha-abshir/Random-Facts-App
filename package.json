@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:api": "node --env-file=.env src/testApi.js"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
