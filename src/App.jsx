@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Nav from "./Nav"
- import Home from "./home"
+import Nav from "./pages/Nav/Nav"
+ import Home from "./pages/home/home"
  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  import {
     TbPaw,
