@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './home.css'
 import { IoIosSearch } from "react-icons/io";
-export default function Home({slicedCategories}) {
+export default function Home({slicedCategories, isSearchActive, setIsSearchActive}) {
     
     return (
         <>
@@ -11,9 +11,13 @@ export default function Home({slicedCategories}) {
                     Access thousands of data points instantly. Search specific topics or browse categories below
                 </p>  
             </div>
-            <div className="search-section ">
+            <div className={`search-section ${isSearchActive ? 'search-active' : ''}`}>
                 <IoIosSearch size={25}/>
-                <input type="text" placeholder="Search Facts, Quotes, Animals..." />
+                <input 
+                    type="text" 
+                    placeholder="Search Facts, Quotes, Animals..." 
+                    onFocus={() => setIsSearchActive(false)}
+                />
             </div>
             <div className="categories">
                <div className="cat-header">

@@ -1,4 +1,5 @@
- import Nav from "./Nav"
+import { useState } from "react";
+import Nav from "./Nav"
  import Home from "./home"
  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  import {
@@ -12,7 +13,7 @@
     TbHospital,
     TbStar,
     TbChecklist,
-    TbQuote,
+    TbQuote
 } from "react-icons/tb";
 import { CiDumbbell } from "react-icons/ci";
 import { FaCarSide } from "react-icons/fa";
@@ -20,6 +21,7 @@ import { MdDirectionsCar } from "react-icons/md";
 import { RiStockLine } from "react-icons/ri";
 import { TbJoker } from "react-icons/tb";
  export default function App() {
+    const [isSearchActive, setIsSearchActive] = useState(false);
 
 	const apiCategories = [
         {
@@ -158,8 +160,12 @@ import { TbJoker } from "react-icons/tb";
 	const slicedCategories = apiCategories.slice(0, 10);
   return (
 	<Router>
-		<Nav />
-		<Home slicedCategories={slicedCategories}/>
+		<Nav setIsSearchActive={setIsSearchActive} />
+		<Home 
+			slicedCategories={slicedCategories} 
+			isSearchActive={isSearchActive} 
+			setIsSearchActive={setIsSearchActive} 
+		/>
 	</Router>
   )
 };

@@ -13,6 +13,7 @@ span {
 
 .hero .hero-description {
     color: rgb(75, 75, 75);
+    font-weight: 500;
 }
 
 .search-section {
@@ -25,6 +26,11 @@ span {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section.search-active {
+    border: 1px solid rgb(45, 45, 212);
+    box-shadow: 0 0 10px rgba(45, 45, 212, 0.5);
 }
 
 .search-section input {
