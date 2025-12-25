@@ -1,7 +1,11 @@
+ import Nav from "./Nav"
+ import Home from "./home"
+ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  export default function App() {
   return (
-    <div>
-      <h1>Random Fact App</h1>
-    </div>
+    <Router>
+      <Nav />
+      <Home />
+    </Router>
   )
 }

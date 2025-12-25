@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDFDFE;
+    padding: 10px;
+}
+
+.nav-icons {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 2em;
+    height: 2em;
+}
+
+.logo p {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 2px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}

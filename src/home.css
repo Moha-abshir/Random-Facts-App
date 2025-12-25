@@ -1,0 +1,62 @@
+.hero {
+    margin: .3em .6em .5em .6em;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0;
+}
+
+span {
+    color: rgb(45, 45, 212);
+}
+
+.hero .hero-description {
+    color: rgb(75, 75, 75);
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 20px;
+    padding: .5em;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-section input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    font-size: clamp(.9rem, 2vw, 1.2rem);
+}
+
+.categories {
+    margin: 1em .5em 1em .5em;
+}
+
+.cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-header h3 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin: 0;
+
+}
+
+.cat-header p {
+    font-size: clamp(.9rem, 2vw, 1.2rem);
+}
+
+.cat-header p a {
+    color: rgb(31, 31, 218);
+    text-decoration: none;
+    font-weight: bold;
+}
