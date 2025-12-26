@@ -38,7 +38,7 @@ export default function Nav({ setIsSearchActive }) {
                     <p>MENU</p>
                     <div className="menu-items">
                         <div className="item">
-                            <FaBoxesStacked color='blue'/><NavLink to="/">Category List</NavLink> <MdKeyboardArrowRight/>
+                            <FaBoxesStacked color='blue'/><NavLink to="/category">Category List</NavLink> <MdKeyboardArrowRight/>
                         </div>
                         <div className="item">
                             <FaExclamationCircle color='rgb(109, 226, 109)'/><NavLink to="/about">About App</NavLink>

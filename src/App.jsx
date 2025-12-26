@@ -1,7 +1,6 @@
-import { useState } from "react";
-import Nav from "./pages/Nav/Nav"
- import Home from "./pages/home/home"
- import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Category from "./pages/Category/category";   
+ import Home from "./pages/home/home";
+ import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
  import {
     TbPaw,
     TbBulb,
@@ -21,8 +20,7 @@ import { MdDirectionsCar } from "react-icons/md";
 import { RiStockLine } from "react-icons/ri";
 import { TbJoker } from "react-icons/tb";
  export default function App() {
-    const [isSearchActive, setIsSearchActive] = useState(false);
-
+    
 	const apiCategories = [
         {
             name: "Animals",
@@ -158,14 +156,12 @@ import { TbJoker } from "react-icons/tb";
         }
     ]
 	const slicedCategories = apiCategories.slice(0, 10);
-  return (
-	<Router>
-		<Nav setIsSearchActive={setIsSearchActive} />
-		<Home 
-			slicedCategories={slicedCategories} 
-			isSearchActive={isSearchActive} 
-			setIsSearchActive={setIsSearchActive} 
-		/>
-	</Router>
+  return (   
+    <Router>
+        <Routes>
+            <Route index element={<Home slicedCategories={slicedCategories} />}/>
+            <Route path="/category" element={<Category apiCategories={apiCategories}/>}/>
+        </Routes>
+    </Router>
   )
 };

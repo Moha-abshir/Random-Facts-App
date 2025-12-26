@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './home.css'
 import { IoIosSearch } from "react-icons/io";
-export default function Home({slicedCategories, isSearchActive, setIsSearchActive}) {
+import Nav from "../Nav/Nav";
+export default function Home({slicedCategories}) {
+    const [isSearchActive, setIsSearchActive] = useState(false);
     
     return (
         <>
+        <Nav isSearchActive={isSearchActive} setIsSearchActive={setIsSearchActive}/>
             <div className="hero">
                 <h1>Explore Knowledge <span className="specifier">Through APIs</span></h1>
                 <p className="hero-description">
@@ -16,13 +20,13 @@ export default function Home({slicedCategories, isSearchActive, setIsSearchActiv
                 <input 
                     type="text" 
                     placeholder="Search Facts, Quotes, Animals..." 
-                    onFocus={() => setIsSearchActive(false)}
+                    onFocus={() => setIsSearchActive(false)} 
                 />
             </div>
             <div className="categories">
                <div className="cat-header">
                  <h3>Popular Categories</h3>
-                 <p><Link to="/">View All</Link></p>
+                 <p><Link to="/category">View All</Link></p>
                </div>
                <div className="cat-grid">
                     {
